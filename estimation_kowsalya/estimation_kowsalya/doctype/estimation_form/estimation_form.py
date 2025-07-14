@@ -8,26 +8,26 @@ from frappe.model.document import Document
 class EstimationForm(Document):
 	def on_update(doc):
 		if doc.workflow_state == "Approved" and doc.customer_email:
-			
-			
-			frappe.sendmail(
-				recipients=[doc.customer_email],
-				subject="Quotation Approved",
-				message="""<p>Dear {{ doc.customer_name or "Valued Customer" }},</p>
-
-							<p>We are pleased to inform you that your quotation <strong>{{ doc.name }}</strong> has been approved.</p>
-
-							<p><strong>Project Title:</strong> {{ doc.project_name }}<br>
-							<strong>Total Amount:</strong> {{ doc.total_estimated_amount }}<br>
-
-							<p>If you have any questions, please feel free to contact us.</p>
-
-							<p>Thank You<br>""",
-				reference_doctype=doc.doctype,
-				reference_name=doc.name
-			)
-
-
+			# Check if default outgoing email is configured
+			if frappe.db.get_value("Email Account", {"default_outgoing": 1}):
+				frappe.sendmail(
+					recipients=[doc.customer_email],
+					subject="Quotation Approved",
+					message=f"""<p>Dear {doc.customer_name or "Valued Customer"},</p>
+						<p>We are pleased to inform you that your quotation <strong>{doc.name}</strong> has been approved.</p>
+						<p><strong>Project Title:</strong> {doc.project_name}<br>
+						<strong>Total Amount:</strong> {doc.total_estimated_amount}<br>
+						<p>If you have any questions, please feel free to contact us.</p>
+						<p>Thank You<br>""",
+					reference_doctype=doc.doctype,
+					reference_name=doc.name
+				)
+			else:
+				frappe.msgprint(
+					"Cannot send email: Default Outgoing Email Account is not set. Please configure it in <strong>Setup > Email > Email Account</strong>.",
+					alert=True,
+					indicator="red"
+				)
 @frappe.whitelist()
 def fetch_address(cust_name):
 	link = frappe.db.get_value("Dynamic Link",{"link_title":cust_name,"link_doctype":"Customer"},"parent")

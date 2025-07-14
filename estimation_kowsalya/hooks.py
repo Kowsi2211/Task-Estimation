@@ -84,7 +84,7 @@ app_license = "mit"
 
 # before_install = "estimation_kowsalya.install.before_install"
 # after_install = "estimation_kowsalya.install.after_install"
-before_install = "estimation_kowsalya.install.before_install"
+# before_install = "estimation_kowsalya.install.before_install"
 
 # Uninstallation
 # ------------
