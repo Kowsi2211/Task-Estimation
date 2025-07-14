@@ -67,7 +67,8 @@
    "fieldtype": "Data",
    "label": "Customer Email",
    "no_copy": 1,
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "project_id",
@@ -93,12 +94,14 @@
   {
    "fieldname": "expected_start_date",
    "fieldtype": "Date",
-   "label": "Expected Start Date"
+   "label": "Expected Start Date",
+   "reqd": 1
   },
   {
    "fieldname": "expected_end_date",
    "fieldtype": "Date",
-   "label": "Expected End Date"
+   "label": "Expected End Date",
+   "reqd": 1
   },
   {
    "default": "user",
@@ -191,7 +194,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-14 15:21:42.002572",
+ "modified": "2025-07-14 15:56:57.395476",
  "modified_by": "Administrator",
  "module": "Estimation Kowsalya",
  "name": "Estimation Form",

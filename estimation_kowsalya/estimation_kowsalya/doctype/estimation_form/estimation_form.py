@@ -6,7 +6,27 @@ from frappe.model.document import Document
 
 
 class EstimationForm(Document):
-	pass
+	def on_update(doc):
+		if doc.workflow_state == "Approved" and doc.customer_email:
+			
+			
+			frappe.sendmail(
+				recipients=[doc.customer_email],
+				subject="Quotation Approved",
+				message="""<p>Dear {{ doc.customer_name or "Valued Customer" }},</p>
+
+							<p>We are pleased to inform you that your quotation <strong>{{ doc.name }}</strong> has been approved.</p>
+
+							<p><strong>Project Title:</strong> {{ doc.project_name }}<br>
+							<strong>Total Amount:</strong> {{ doc.total_estimated_amount }}<br>
+
+							<p>If you have any questions, please feel free to contact us.</p>
+
+							<p>Thank You<br>""",
+				reference_doctype=doc.doctype,
+				reference_name=doc.name
+			)
+
 
 @frappe.whitelist()
 def fetch_address(cust_name):
