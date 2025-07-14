@@ -1,0 +1,30 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-07-14 12:20:00.793330",
+  "name": "Submit",
+  "workflow_action_name": "Submit"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-07-14 12:26:59.270911",
+  "name": "Edit",
+  "workflow_action_name": "Edit"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-07-14 12:28:36.221143",
+  "name": "Final Approve",
+  "workflow_action_name": "Final Approve"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-07-14 12:29:33.474868",
+  "name": "Revert",
+  "workflow_action_name": "Revert"
+ }
+]

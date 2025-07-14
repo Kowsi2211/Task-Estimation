@@ -1,0 +1,219 @@
+{
+ "actions": [],
+ "autoname": "format:{project_name}-{DD}-{MM}-{YYYY}-{###}",
+ "creation": "2025-07-13 19:40:14.783216",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "form_details_section",
+  "customer",
+  "customer_name",
+  "customer_address",
+  "customer_email",
+  "approved_on",
+  "status",
+  "column_break_nbnc",
+  "project_id",
+  "project_name",
+  "expected_start_date",
+  "expected_end_date",
+  "created_by",
+  "created_on",
+  "section_break_jgvw",
+  "estimation_table",
+  "section_break_xbuk",
+  "total_no_of_employees",
+  "column_break_ypvb",
+  "total_estimated_amount",
+  "section_break_qrcu",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_qrcu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Estimation Form",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer Name",
+   "no_copy": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_address",
+   "fieldtype": "Small Text",
+   "label": "Customer Address ",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_email",
+   "fieldtype": "Data",
+   "label": "Customer Email",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "project_id",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project ID",
+   "no_copy": 1,
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project_id.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project Name",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date"
+  },
+  {
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "label": "Expected End Date"
+  },
+  {
+   "default": "user",
+   "fieldname": "created_by",
+   "fieldtype": "Data",
+   "label": "Created By",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "created_on",
+   "fieldtype": "Date",
+   "label": "Created On",
+   "no_copy": 1,
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "approved_on",
+   "fieldtype": "Date",
+   "label": "Approved on",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_nbnc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "form_details_section",
+   "fieldtype": "Section Break",
+   "label": "Form Details"
+  },
+  {
+   "fieldname": "section_break_jgvw",
+   "fieldtype": "Section Break",
+   "label": "Estimation "
+  },
+  {
+   "fieldname": "estimation_table",
+   "fieldtype": "Table",
+   "label": "Estimation Table",
+   "no_copy": 1,
+   "options": "Estimation Table"
+  },
+  {
+   "fieldname": "section_break_xbuk",
+   "fieldtype": "Section Break",
+   "label": "Total"
+  },
+  {
+   "fieldname": "total_no_of_employees",
+   "fieldtype": "Data",
+   "label": "Total No of Employees",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "column_break_ypvb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_estimated_amount",
+   "fieldtype": "Float",
+   "label": "Total Estimated Amount",
+   "no_copy": 1,
+   "precision": "2"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "no_copy": 1,
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nSubmitted\nRejected\nApproved\nFinal Approve",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-07-14 15:21:42.002572",
+ "modified_by": "Administrator",
+ "module": "Estimation Kowsalya",
+ "name": "Estimation Form",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,184 @@
+[
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [
+   {
+    "fieldname": "Name ",
+    "fieldtype": "Data",
+    "label": "Name ",
+    "options": null,
+    "parent": "Project Estimation Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "Customer Name",
+    "fieldtype": "Data",
+    "label": "Customer Name",
+    "options": null,
+    "parent": "Project Estimation Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "Project ID",
+    "fieldtype": "Data",
+    "label": "Project ID",
+    "options": null,
+    "parent": "Project Estimation Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "Project Name",
+    "fieldtype": "Data",
+    "label": "Project Name",
+    "options": null,
+    "parent": "Project Estimation Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "Expected Start Date",
+    "fieldtype": "Data",
+    "label": "Expected Start Date",
+    "options": null,
+    "parent": "Project Estimation Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "Expected End Date",
+    "fieldtype": "Data",
+    "label": "Expected End Date",
+    "options": null,
+    "parent": "Project Estimation Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "Total No of Employees",
+    "fieldtype": "Data",
+    "label": "Total No of Employees",
+    "options": null,
+    "parent": "Project Estimation Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "Total Estimated Amount",
+    "fieldtype": "Data",
+    "label": "Total Estimated Amount",
+    "options": null,
+    "parent": "Project Estimation Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "Created On",
+    "fieldtype": "Date",
+    "label": "Created On",
+    "options": null,
+    "parent": "Project Estimation Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   },
+   {
+    "fieldname": "Created By",
+    "fieldtype": "Data",
+    "label": "Created By",
+    "options": null,
+    "parent": "Project Estimation Summary",
+    "parentfield": "columns",
+    "parenttype": "Report",
+    "width": 0
+   }
+  ],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [
+   {
+    "default": null,
+    "fieldname": "project_id",
+    "fieldtype": "Link",
+    "label": "Project ID",
+    "mandatory": 1,
+    "options": "Project",
+    "parent": "Project Estimation Summary",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "expected_start_date",
+    "fieldtype": "Date",
+    "label": "From Date",
+    "mandatory": 1,
+    "options": null,
+    "parent": "Project Estimation Summary",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "expected_end_date",
+    "fieldtype": "Date",
+    "label": "To Date",
+    "mandatory": 1,
+    "options": null,
+    "parent": "Project Estimation Summary",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   },
+   {
+    "default": null,
+    "fieldname": "customer_name",
+    "fieldtype": "Link",
+    "label": "Customer Name",
+    "mandatory": 1,
+    "options": "Customer",
+    "parent": "Project Estimation Summary",
+    "parentfield": "filters",
+    "parenttype": "Report",
+    "wildcard_filter": 0
+   }
+  ],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2025-07-14 12:06:10.688096",
+  "module": "Estimation Kowsalya",
+  "name": "Project Estimation Summary",
+  "prepared_report": 0,
+  "query": "SELECT \r\n    e.name as 'Name',\r\n    e.customer_name as 'Customer name',\r\n    e.project_id as 'Project ID',\r\n    e.project_name as 'Project Name',\r\n    e.expected_start_date as 'Expected Start Date',\r\n    e.expected_end_date as 'Expected End Date',\r\n    e.total_no_of_employees as 'Total No of Employees',\r\n    e.total_estimated_amount as 'Total Estimated Amount',\r\n    e.created_on as 'Created On',\r\n    e.created_by as 'Created By'\r\nFROM `tabEstimation Form` as e\r\nWHERE  \r\n (e.project_id = %(project_id)s OR %(project_id)s IS NULL OR %(project_id)s = '') \r\n AND (e.customer_name = %(customer_name)s OR %(customer_name)s IS NULL OR %(customer_name)s = '')\r\nAND (e.expected_start_date = %(expected_start_date)s OR %(expected_start_date)s IS NULL OR %(expected_start_date)s = '') \r\nAND (e.expected_end_date = %(expected_end_date)s OR %(expected_end_date)s IS NULL OR %(expected_end_date)s = '')\r\n",
+  "ref_doctype": "Estimation Form",
+  "reference_report": null,
+  "report_name": "Project Estimation Summary",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Project Estimation Summary",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ }
+]

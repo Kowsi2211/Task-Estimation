@@ -242,3 +242,69 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures = [
+    {"dt":"Custom Field","filters": [
+        [ 
+            "name","in", [
+            "Estimation Form-workflow_state"
+        ]
+        ]
+       
+    ]},
+    {"dt":"Workflow","filters": [
+        [ 
+            "name","in", [
+            "Estimation Form Workflow"
+        ]
+        ]
+       
+    ]},
+    {"dt":"Workflow Action Master","filters": [
+        [ 
+            "name","in", [
+            "Revert","Final Approve","Edit","Submit",
+        ]
+        ]
+       
+    ]},
+    {"dt":"Report","filters": [
+        [ 
+            "name","in", [
+            "Project Estimation Summary",
+        ]
+        ]
+       
+    ]},
+    {"dt":"Dashboard","filters": [
+        [ 
+            "name","in", [
+            "Estimation form dashboard",
+        ]
+        ]
+       
+    ]},
+    {"dt":"Number Card","filters": [
+        [ 
+            "name","in", [
+            "Submitted Estimation Form","Rejected Estimation Form","Draft Estimation Form","Approved Estimation Form","Final Approval Estimation Form"
+        ]
+        ]
+       
+    ]},
+    {"dt":"Dashboard Chart","filters": [
+        [ 
+            "name","in", [
+                "Estimation Form Chart"
+        ]
+        ]
+       
+    ]},
+    {"dt":"Role","filters": [
+        [ 
+            "name","in", [
+                "Estimation Approver","Final Approver"
+        ]
+        ]
+       
+    ]},
+]

@@ -1,0 +1,54 @@
+[
+ {
+  "cards": [
+   {
+    "card": "Final Approval Estimation Form",
+    "parent": "Estimation form dashboard",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   },
+   {
+    "card": "Approved Estimation Form",
+    "parent": "Estimation form dashboard",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   },
+   {
+    "card": "Draft Estimation Form",
+    "parent": "Estimation form dashboard",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   },
+   {
+    "card": "Rejected Estimation Form",
+    "parent": "Estimation form dashboard",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   },
+   {
+    "card": "Submitted Estimation Form",
+    "parent": "Estimation form dashboard",
+    "parentfield": "cards",
+    "parenttype": "Dashboard"
+   }
+  ],
+  "chart_options": null,
+  "charts": [
+   {
+    "chart": "Estimation Form Chart",
+    "parent": "Estimation form dashboard",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "width": "Full"
+   }
+  ],
+  "dashboard_name": "Estimation form dashboard",
+  "docstatus": 0,
+  "doctype": "Dashboard",
+  "is_default": 0,
+  "is_standard": 0,
+  "modified": "2025-07-14 14:49:01.541670",
+  "module": null,
+  "name": "Estimation form dashboard"
+ }
+]

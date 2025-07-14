@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-13 19:54:21.988961",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "length",
+  "width",
+  "no_of_employees",
+  "rate",
+  "estimation_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "length",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Length ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "width",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Width ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "no_of_employees",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No of Employees",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "estimation_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Estimation Amount",
+   "precision": "2",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-13 21:11:55.282957",
+ "modified_by": "Administrator",
+ "module": "Estimation Kowsalya",
+ "name": "Estimation Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
